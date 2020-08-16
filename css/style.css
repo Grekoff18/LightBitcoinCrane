@@ -1,0 +1,55 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	font-family: "Arial";
+}
+
+html, body, .wrapper {
+	height: 100%;
+}
+
+body {
+	background-color: #E4E9F4;
+}
+
+.wrapper {
+	width: 1400px;
+	height: 100%;
+	display: flex;
+	margin: 0 auto;
+}
+
+.slide, .content {
+	flex: 1;
+}
+
+.slide {
+	max-width: 300px;
+}
+
+.slide div {
+	background-color: #FFF;
+	margin: 20px;
+	height: 225px;
+	border-radius: 5px;
+	position: relative;
+}
+
+.slide div p {
+	position: absolute;
+	top: 40%;
+	left: 7.5%;
+	padding: 10px;
+	border: 1px solid #111;
+	text-align: center;
+	font-size: 13px;
+}
+
+.content {
+	padding: 10px;
+	background: #FFF;
+	border-radius: 5px; 
+	margin: 20px 20px;
+}
+
