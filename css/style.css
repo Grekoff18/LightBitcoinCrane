@@ -9,6 +9,38 @@ html, body, .wrapper {
 	height: 100%;
 }
 
+h1 { 
+	color: #9CA9Cb;
+	font-weight: normal;
+	font-size: 25px;
+	border-bottom: 1px solid #7186C7;
+	padding-bottom: 10px;
+}
+
+p {
+	margin: 15px 0;
+}
+
+input, button {
+	padding: 8px;
+	outline: none;
+	border-radius: 5px;
+}
+
+input {
+	width: 285px;
+	background-color: #f9f9f9;
+	border: 1px solid #D3D3D3;
+}
+
+button {
+	margin-top: 15px;
+	background: #7186C7;
+ 	color: #FFF; 
+ 	border: 0px;
+ 	border-radius: 3px;
+}
+
 body {
 	background-color: #E4E9F4;
 }
@@ -32,7 +64,7 @@ body {
 	background-color: #FFF;
 	margin: 20px;
 	height: 225px;
-	border-radius: 5px;
+	border-radius: 3px;
 	position: relative;
 }
 
@@ -49,7 +81,7 @@ body {
 .content {
 	padding: 10px;
 	background: #FFF;
-	border-radius: 5px; 
+	border-radius: 3px; 
 	margin: 20px 20px;
 }
 
