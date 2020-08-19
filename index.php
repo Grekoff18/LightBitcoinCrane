@@ -36,4 +36,12 @@ function bottom() {
     require_once("sections/bottom.php");
 };
 
+function message($message) {
+    exit('{message":"'.$message.'"}');
+}
+
+function go($url) {
+    exit('{"go":"'.$url.'"}');
+}
+
 ?>

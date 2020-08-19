@@ -1,8 +1,8 @@
 	</div>
 		<div class="slide">
-			<div><p>Здесь могла быть ваша реклама</p></div>
-			<div><p>Здесь могла быть ваша реклама</p></div>
-			<div><p>Здесь могла быть ваша реклама</p></div>
+			<div><img src='../img/slide.jpg'></div>
+			<div><img src='../img/slide.jpg'></div>
+			<div><img src='../img/slide.jpg'></div>
 		</div>
 	</div>
 </body>
