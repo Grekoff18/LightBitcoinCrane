@@ -4,10 +4,8 @@ if ($_SERVER['REQUEST_URI'] == '/') {
 } else {
     $page = substr($_SERVER['REQUEST_URI'], 1);
 }
-
 session_start();
 require_once("config.php");
-
 // The usual distribution of site pages
 if (file_exists("all/$page.php")) {
     require_once("all/$page.php");
@@ -26,7 +24,6 @@ function db() {
         exit('Error database connection');
     }
 }
-db();
 // This is not a header because the header is already taken by the standard php function 
 function top($title) {
     require_once("sections/top.php");
@@ -35,13 +32,4 @@ function top($title) {
 function bottom() {
     require_once("sections/bottom.php");
 };
-
-function message($message) {
-    exit('{message":"'.$message.'"}');
-}
-
-function go($url) {
-    exit('{"go":"'.$url.'"}');
-}
-
 ?>
