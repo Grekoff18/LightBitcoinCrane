@@ -1,11 +1,14 @@
-<?php 
+<?php
+session_start();
+
 if ($_SERVER['REQUEST_URI'] == '/') {
     $page = 'home';
 } else {
     $page = substr($_SERVER['REQUEST_URI'], 1);
 }
-session_start();
+
 require_once("config.php");
+
 // The usual distribution of site pages
 if (file_exists("all/$page.php")) {
     require_once("all/$page.php");
@@ -16,6 +19,7 @@ if (file_exists("all/$page.php")) {
 } else {
     exit('Page not found 404');
 }
+
 // Connecting to database
 function db() {
     global $db;
@@ -24,6 +28,7 @@ function db() {
         exit('Error database connection');
     }
 }
+
 // This is not a header because the header is already taken by the standard php function 
 function top($title) {
     require_once("sections/top.php");
