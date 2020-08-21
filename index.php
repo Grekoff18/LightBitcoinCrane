@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 if ($_SERVER['REQUEST_URI'] == '/') {
     $page = 'home';
 } else {
@@ -19,16 +18,10 @@ if (file_exists("all/$page.php")) {
 } else {
     exit('Page not found 404');
 }
-
 // Connecting to database
-function db() {
-    global $db;
-    $db = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-    if (!$db) {
-        exit('Error database connection');
-    }
-}
-
+if (!$dbConnect) {
+    die('Error connect to DataBase');
+} 
 // This is not a header because the header is already taken by the standard php function 
 function top($title) {
     require_once("sections/top.php");
@@ -37,4 +30,5 @@ function top($title) {
 function bottom() {
     require_once("sections/bottom.php");
 };
+
 ?>
