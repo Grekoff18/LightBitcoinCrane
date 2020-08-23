@@ -1,6 +1,5 @@
 <?php top("Signup"); ?>
 <?php
-session_start();
 require_once("index.php");
 require_once("config.php");
 
@@ -28,7 +27,6 @@ if ($password === $password_confirm) {
 } else {
 	$_SESSION['message'] = "Пароли не совпадают";
 	header("Location: register");
-	ob_end_flush();
 }
 
 ?>

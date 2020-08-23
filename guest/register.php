@@ -23,6 +23,7 @@
 		<p>У вас уже есть аккаунт? - <a href="login">Авторизируйтесь</a></p>
 
 		<?php 
+			var_dump($_POST);
 			if (isset($_SESSION['message'])) {
 				echo '<p class="error_message">'. $_SESSION['message'] . `</p>`;
 			}
