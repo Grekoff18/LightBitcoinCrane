@@ -1,36 +1,38 @@
-<?php top("Регистрация"); ?>
+<?php 
+top("Регистрация");
+require_once("config.php");
+?>
 
-<script src="https://www.google.com/recaptcha/api.js"></script>
+<h1>Vxod</h1>
+<p><input type="text" id="wallet" name="wallet" placeholder="Введите номер своего кошелька"></p>
+<p><input type="text" id="login" name="login" placeholder="Введите свой логин"></p>
+<div class="g-recaptcha" data-sitekey="<?=RECAPTCHA_SITE_KEY?>"></div>
+<p><button onclick="send_post('account', 'register', 'wallet.login')">Register</button></p>
 
-<div class="form_wrapper">
-	<form class="auth_form" action="signup" method="post" enctype="multipart/form-data">
-		<label>ФИО</label>
-			<input type="text" name="full_name" placeholder="Введите свое ФИО">
-		<label>Логин</label>
-			<input type="text" name="login" placeholder="Введите свой логин">
-		<label>Кошелёк</label>
-			<input type="text" name="wallet" placeholder="Введите свой номер кошелька">
-		<label>Почта</label>
-			<input type="email" name="email" placeholder="Введите адрес своей почты">
-		<label>Изображение профиля</label>
-			<input type="file" name="avatar">
-		<label>Пароль</label>
-			<input type="password" name="password" placeholder="Введите ваш пароль">
-		<label>Подтверждение пароля</label>
-			<input type="password" name="password_confirm" placeholder="Подтвердите пароль">
-		<div class="g-recaptcha" data-sitekey="<?=RECAPTCHA_SITE_KEY?>"></div>
-		<button type="submit">Войти</button>
-		<p>У вас уже есть аккаунт? - <a href="login">Авторизируйтесь</a></p>
+<script type="text/javascript">
+	function send_post(url, name, data) {
+	var form = '';
+	$.each(data.split('.'), function(k, v) {
+		form += '&' + v + '=' + $('#' + v).val();
+	});
 
-		<?php 
-			var_dump($_POST);
-			if (isset($_SESSION['message'])) {
-				echo '<p class="error_message">'. $_SESSION['message'] . `</p>`;
-			}
-			unset($_SESSION['message']);
-		?>
-
-	</form>
-</div>
+	$.ajax({
+		type: 'POST',
+		url: '/' + url,
+		data: name + '_f=1' + form,
+		cache: false,
+		success: function(result) {
+			obj = jQuery.parseJSON(result);
+			if (obj.go)
+				go(obj.go);
+			else
+				alert(obj.message);
+		}
+	});
+}
+function go(url) {
+	window.location.href = '/' + url;
+}
+</script>
 
 <?php bottom(); ?>
