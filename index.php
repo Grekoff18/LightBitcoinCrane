@@ -31,12 +31,4 @@ function bottom() {
     require_once("sections/bottom.php");
 };
 
-function message($text) {
-	exit('{"message":"'.$text.'"}');
-};
-
-function go($url) {
-	exit('{"go":"'.$url.'"}');
-};
-
 ?>
