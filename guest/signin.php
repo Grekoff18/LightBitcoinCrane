@@ -12,9 +12,11 @@
 		$_SESSION['unknwon_user'] = "Такой пользователь не найден)) <br>
 									 Возможно вы ввели не правельный логин или пароль.";
 		header("Location: home");
-	} 
+	} else {
+		$_SESSION['id'] = 1;
+	}
 	setcookie('usr', $array_user_information['login'], time() + 3600, "/");
 	$dbConnect->close();
-	header("Location: home");
+	header("Location: profile");
 	bottom();
  ?>

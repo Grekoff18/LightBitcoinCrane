@@ -19,10 +19,9 @@ if ($_COOKIE['usr'] == ''): ?>
 
 	</form>
 </div>
-<?php else: ?>
-	<div class="some">
-		<?php print_r($_COOKIE['usr']); ?>
-	</div>
+<?php else:
+var_dump($_SESSION); ?>
+	
 <?php endif; ?>
 	
 <?php bottom(); ?>
