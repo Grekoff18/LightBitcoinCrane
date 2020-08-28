@@ -22,7 +22,7 @@ loginValid($login);
 function passwordCompare($pass, $confirm_pass) {
 	if (strlen($pass) > 10) {
 		if ($pass === $confirm_pass) {
-			header("Location: login");
+			header("Location: home");
 		} else {
 			$_SESSION['pass_validate'] = "Пароли не совпадают";
 			header("Location: register");

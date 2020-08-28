@@ -1,9 +1,8 @@
-<?php 
+<?php
 top("Регистрация");
 require_once("config.php");
 ?>
 <script src="https://www.google.com/recaptcha/api.js"></script>
-
 <div class="form_wrapper">
 	<form class="auth_form" action="signup" method="post">
 		<label>Логин</label>
@@ -18,7 +17,7 @@ require_once("config.php");
 			<input type="text" name="wallet" placeholder="Введите свой номер кошелька">
 		<div class="g-recaptcha" data-sitekey="<?=RECAPTCHA_SITE_KEY?>"></div>
 		<button type="submit">Зарегистрироватся</button>
-		<p>У вас уже есть аккаунт? - <a href="login">Авторизируйтесь</a></p>
+		<p>У вас уже есть аккаунт? - <a href="home">Авторизируйтесь</a></p>
 
 		<?php  
 			if (count($_SESSION) > 0) {
@@ -47,6 +46,5 @@ require_once("config.php");
 
 	</form>
 </div>
+	
 <?php bottom(); ?>
-
-

@@ -1,6 +1,5 @@
 <?php 
 	top("Привет");
-	session_start();
 	require_once("config.php");
 
 	$login = $_POST['login'];
@@ -12,11 +11,10 @@
 	if(count($array_user_information) == 0) {
 		$_SESSION['unknwon_user'] = "Такой пользователь не найден)) <br>
 									 Возможно вы ввели не правельный логин или пароль.";
-		header("Location: login");
-	}
-	setcookie('user', $array_user_information->login, time() + 3600 *24, '/');
+		header("Location: home");
+	} 
+	setcookie('usr', $array_user_information['login'], time() + 3600, "/");
 	$dbConnect->close();
-	echo $_COOKIE['user'];
-
+	header("Location: home");
 	bottom();
  ?>
