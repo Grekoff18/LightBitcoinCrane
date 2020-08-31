@@ -119,4 +119,21 @@ body {
 	justify-content: center;
 }
 
+.referal_table {
+	width: 100%;
+}
+
+.referal_table th, td {
+	padding: 15px;
+} 
+
+.referal_table th {
+	background: #7186C7;
+	color: white;
+}
+
+.news-butn {
+	color: red;
+	font-size: 20px;
+}
 

@@ -72,8 +72,14 @@ function getCaptcha() {
 }
 getCaptcha();
 
+if ($_SESSION['referal']) {
+	$referal = $_SESSION['referal'];
+} else {
+	$referal = 0;
+}
+
 $password = md5($password);
-$dbConnect->query("INSERT INTO `users` (`login`, `email`, `password`, `payer_wallet`) VALUES('$login', '$email', '$password', '$wallet')");
+$dbConnect->query("INSERT INTO `users` (`referal`, `login`, `email`, `password`, `payer_wallet`) VALUES('$referal', '$login', '$email', '$password', '$wallet')");
 $dbConnect->close();
 bottom();
 ?>
