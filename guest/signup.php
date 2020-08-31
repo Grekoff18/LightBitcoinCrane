@@ -15,6 +15,7 @@ function loginValid($log) {
 		header("Location: register");
 		ob_get_flush();
 		$_SESSION['login_validate'] = "Логин может содержать только латинские буквы и цыфры без пробелов, длинной от 3 до 15 символов";
+		exit();
 	}
 }
 loginValid($login);
@@ -30,6 +31,7 @@ function passwordCompare($pass, $confirm_pass) {
 	} else {
 		$_SESSION['pass_length_validate'] = "Пароль должен содержать более 10 символов";
 		header("Location: register");
+		exit();
 	}
 }
 passwordCompare($password, $password_confirm);
@@ -39,6 +41,7 @@ function walletValidate($wall) {
 	if (substr($wall, 0,1) !== 'P' || !is_numeric(substr($wall, 1))) {
 		$_SESSION['wallet_validate'] = "Кошелёк указан неверно";
 		header("Location: register");
+		exit();
 	}
 }
 walletValidate($wallet);
@@ -64,6 +67,7 @@ function getCaptcha() {
 	 } else {
 		$_SESSION['captcha_validate'] = "Вы не активировали каптчу";
 		header("Location: register");
+		exit();
 	} 
 }
 getCaptcha();

@@ -20,7 +20,8 @@ if ($_COOKIE['usr'] == ''): ?>
 	</form>
 </div>
 <?php else:
-var_dump($_SESSION); ?>
+exitFromProfile();
+?>
 	
 <?php endif; ?>
 	

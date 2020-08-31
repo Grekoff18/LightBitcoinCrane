@@ -30,5 +30,16 @@ function top($title) {
 function bottom() {
     require_once("sections/bottom.php");
 };
+// function exit from profile
+function exitFromProfile() {
+	if (isset($_POST['exit'])) {
+		setcookie('usr', $array_user_information['login'], time() - 3600, "/");
+		$_SESSION['id'] = 0;
+	}	
+}
+// A function that translates our balance into the desired form
+function currencyFormatter($num, $currency = "$") {
+	return number_format((float) $num, 2, ".", "") . ' ' . $currency;
+}
 
 ?>
