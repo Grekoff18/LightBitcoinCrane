@@ -5,6 +5,7 @@
 	$login = $_POST['login'];
 	$password = filter_var(trim($_POST['password']));
 	$password = md5($password);
+	
 
 		$result = $dbConnect->query("SELECT * FROM `users` WHERE `login` = '$login' AND `password` = '$password'");
 		$confirm_user_information = $result->fetch_assoc();
