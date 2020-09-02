@@ -47,7 +47,7 @@
 	   if (isset($_POST['exit'])) {
 		  setcookie('usr', $confirm_user_information['login'], time() - 3600, "/");
 		  $_SESSION['id'] = 0;
-            session_destroy();
+          session_destroy();
 	   }	
     }
 
@@ -60,6 +60,34 @@
     function getUserInfo($info) {
         global $arr_usr_info;
         return $arr_usr_info[$info];
+    }
+
+    // Function for generating random numbers for issuing bonuses
+    function randomNumber($min = 0, $max = 1) {
+        return round($min + mt_rand() / mt_getrandmax() * ($max - $min), 2);
+    }
+
+    // Captcha validate function
+    function getRecaptchaSuccess($captcha_var_name, $url_name, $location) {
+        $captcha_var_name = $_POST['g-recaptcha-response'];
+        if ($captcha_var_name) {
+            $url_name = 'https://www.google.com/recaptcha/api/siteverify?secret='.RECAPTCHA_SITE_SERCRET_KEY.
+                    '&response='.$captcha_var_name.
+                    '&remoteip='.$_SERVER['REMOTE_ADDR'];
+            $answer = file_get_contents($url_name);
+            $decodeAnswer = json_decode($answer);
+            if ($decodeAnswer->success == true) {
+                $_SESSION['recaptcha_answer'] = "Captcha proidena";
+            } else if ($decodeAnswer->success == false) {
+                $_SESSION['recaptcha_answer'] = "Captcha ne proidena";
+                header("Location: $location");
+                exit();
+            }
+        } else {
+            $_SESSION['recaptcha_answer'] = "Vu actevirovali captchu?";
+            header("Location: $location");
+            exit();
+        } 
     }
 
 ?>

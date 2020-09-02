@@ -23,6 +23,7 @@ if ($_COOKIE['usr'] == ''): ?>
 exitFromProfile();
 ?>
 	
-<?php endif; ?>
+<?php endif;
+?>
 	
 <?php bottom(); ?>

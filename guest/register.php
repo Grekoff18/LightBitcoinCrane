@@ -33,15 +33,15 @@ require_once("config.php");
 				if (isset($_SESSION['wallet_validate'])) {
 					echo '<p class="error_message">'.$_SESSION['wallet_validate'].'</p>';
 				}
-				if (isset($_SESSION['captcha_validate'])) {
-					echo '<p class="error_message">'.$_SESSION['captcha_validate'].'</p>';
+				if (isset($_SESSION['recaptcha_answer'])) {
+					echo '<p class="error_message">'.$_SESSION['recaptcha_answer'].'</p>';
 				}
 			}
 			unset($_SESSION['login_validate']);
 			unset($_SESSION['pass_length_validate']);
 			unset($_SESSION['pass_validate']);
 			unset($_SESSION['wallet_validate']);
-			unset($_SESSION['captcha_validate']);
+			unset($_SESSION['recaptcha_answer']);
 		?>
 
 	</form>
