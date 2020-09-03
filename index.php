@@ -1,6 +1,7 @@
 <?php
     ob_start();
     session_start();
+    $timerActive = 0;
 
     // If there is just a slash in the url line, then we redirect to the main page
     if ($_SERVER['REQUEST_URI'] == '/') {

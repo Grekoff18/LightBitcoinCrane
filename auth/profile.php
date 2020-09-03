@@ -3,27 +3,33 @@
 
 	require_once("config.php");
 	require_once("index.php");
-	
+
 	$balance = getUserInfo("balance");
+	$limit = strtotime("+10 seconds");
+
 ?>
 <script src="https://www.google.com/recaptcha/api.js"></script>
-	<p>Ваш баланс - <?=currencyFormatter($balance, "руб.");?></p>
-	<form action="account" method="post">
-		<label>Получи бонус до 1 рубля</label>
-		<input type="hidden" name="bonus">
-		<div class="g-recaptcha" data-sitekey="<?=RECAPTCHA_SITE_KEY?>"></div>
-		<button type="submit">Получить</button>
-	</form>
-	<p>Vash bonus - <?=$_SESSION['bonus'];?></p>
-	<p>Ваша реферальная ссылка - <?=MAIN_URL.getUserInfo("id");?></p>
+<p>Ваш баланс - <?=currencyFormatter($balance, "руб.");?></p>
+<form action="account" method="post">
+	<label>Получи бонус до 1 рубля</label>
+	<input type="hidden" name="bonus">
+	<input type="hidden" name="limit" value="<?=$limit?>">
+	<div class="g-recaptcha" data-sitekey="<?=RECAPTCHA_SITE_KEY?>"></div>
+	<button type="submit">Получить</button>
+</form>
+<p>Vash bonus - <?=$_SESSION['bonus'];?></p>
+<p>Ваша реферальная ссылка - <?=MAIN_URL.getUserInfo("id");?></p>
 
-	<form action="home" method="post">
-		<input type="hidden" name="exit">
-		<button type="submit">Выйти из аккаунта</button>
-	</form>
-	<a href="news">Перейти на главную</a>
-	<?php echo $_SESSION['recaptcha_answer'] ?>
-	<p><?=$_SESSION['hahaha']?></p>
+<form action="home" method="post">
+	<input type="hidden" name="exit">
+	<button type="submit">Выйти из аккаунта</button>
+</form>
+<a href="news">Перейти на главную</a>
+<?php 
+	echo $_SESSION['recaptcha_answer']
+?>
+<p> <?php echo $_SESSION['wait']; ?> </p>
+
 	<!-- Referral table -->
 	<div class="referal_box">
 
