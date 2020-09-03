@@ -8,17 +8,18 @@
 	if (isset($bonus)) {
 		getRecaptchaSuccess($recaptcha, $link, 'profile');
 		$time = time();
-		$_SESSION['bonus'] = randomNumber();
-		if (isset($_POST['limit'])) {
-			if ($time < $_POST['limit']) {
-				$timerActive = 1;
-				$_SESSION['wait'] = "Vam ostalos shdat:" . ($_POST['limit'] - $time) . "sec";
-			} else if ($time == $_POST['limit'] || $time > $_POST['limit']) {
-				$timerActive = 2;
-				$_SESSION['wait'] = "VI activirovali bonus";
+		$timeData = $dbConnect->query("SELECT `time` FROM `bonus_limit` WHERE `ip` = '$_SERVER[REMOTE_ADDR]'");
+		$limit = strtotime('+10 seconds');
+		if ($timeData->num_rows == false) {
+			$dbConnect->query("INSERT INTO `bonus_limit` VALUES ('$_SERVER[REMOTE_ADDR]', $limit)");
+		} else {
+			$row = $timeData->fetch_assoc();
+			if ($time < $row['time']) {
+				echo "Zhdi:" . ($row['time'] - $time) . "sec.";
 			}
-			header("Location: profile");
+			$dbConnect->query("UPDATE `bonus_limit` SET `time` = $limit WHERE `ip` = '$_SERVER[REMOTE_ADDR]'");
 		}
+		$row = $timeData->fetch_assoc();
 	}
 	bottom();
 ?>

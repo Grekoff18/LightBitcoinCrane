@@ -1,7 +1,6 @@
 <?php
     ob_start();
     session_start();
-    $timerActive = 0;
 
     // If there is just a slash in the url line, then we redirect to the main page
     if ($_SERVER['REQUEST_URI'] == '/') {
@@ -17,7 +16,6 @@
     // The usual distribution of site pages
     if (file_exists("all/$page.php")) {
         require_once("all/$page.php");
-    } else if ($_SESSION['id'] == 1 and file_exists("auth/$page.php")) {
         require_once("auth/$page.php");
     } else if ($_SESSION['id'] !== 1 and file_exists("guest/$page.php")) {
         require_once("guest/$page.php");
