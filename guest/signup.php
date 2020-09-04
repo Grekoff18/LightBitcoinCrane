@@ -58,7 +58,7 @@
 	}
 
 	$password = md5($password);
-	$dbConnect->query("INSERT INTO `users` (`referal`, `login`, `email`, `password`, `payer_wallet`) VALUES('$referal', '$login', '$email', '$password', '$wallet')");
+	$dbConnect->query("INSERT INTO `users` (`referal`, `login`, `email`, `password`, `payer_wallet`, `balance`) VALUES ('$referal', '$login', '$email', '$password', '$wallet', '$userBalance')");
 	$dbConnect->close();
 	bottom();
 ?>

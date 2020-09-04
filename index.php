@@ -13,11 +13,14 @@
     // This file contains important and classified data.
     require_once("config.php");
 
+    $userBalance = 0;
+
     // The usual distribution of site pages
     if (file_exists("all/$page.php")) {
         require_once("all/$page.php");
+    } else if ($_SESSION['id'] == 1 and file_exists("auth/$page.php")) {
         require_once("auth/$page.php");
-    } else if ($_SESSION['id'] !== 1 and file_exists("guest/$page.php")) {
+    } else if ($_SESSION['id'] != 1 and file_exists("guest/$page.php")) {
         require_once("guest/$page.php");
     } else if (is_numeric($page)) {
         $_SESSION['referal'] = $page;
@@ -46,7 +49,6 @@
 	   if (isset($_POST['exit'])) {
 		  setcookie('usr', $confirm_user_information['login'], time() - 3600, "/");
 		  $_SESSION['id'] = 0;
-          session_destroy();
 	   }	
     }
 
