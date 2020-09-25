@@ -2,7 +2,7 @@
 	top('Profile');
 	require_once("config.php");
 	require_once("index.php");
-	global $dbConnect;
+	global $dbConnect, $count;
 	$limit = strtotime("+10 seconds");
 ?>
 
@@ -54,11 +54,13 @@
 						$refera_balance_array = [];
 						$refera_login_array = $ref['login'];
 						$refera_balance_array = $ref['balance'];
-						echo "<tr>
-								<td>".$count."</td>
-								<td>".$refera_login_array."</td>
-								<td>".currencyFormatter($refera_balance_array, 'rub.')."</td>
-						  	  </tr>";
+						?>
+                        <tr>
+                            <td><?=$count?></td>
+                            <td><?=$refera_login_array?></td>
+                            <td><?=currencyFormatter($refera_balance_array, 'rub.')?></td>
+                        </tr>
+                        <?php
 					}
 				}
 			?>

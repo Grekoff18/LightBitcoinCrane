@@ -2,7 +2,7 @@
 	top("Signup");
 	require_once("index.php");
 	require_once("config.php");
-	global $dbConnect;
+	global $dbConnect,$captcha, $url, $userBalance;
 
 	$login = $_POST['login'];
 	$email = $_POST['email'];
@@ -63,4 +63,6 @@
 	mysqli_close($dbConnect);
 	bottom();
 ?>
+
+
 

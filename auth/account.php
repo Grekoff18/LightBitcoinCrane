@@ -2,13 +2,13 @@
 	top("Account");
 	require_once("config.php");
 	require_once("index.php");
-    global $dbConnect;
+    global $dbConnect, $userBalance;
 	$bonus = $_POST['bonus'];
 	$_SESSION['identificator'] = getUserInfo("id");
 	
 	if (isset($bonus)) {
 		$time = time();
-		$data_time = mysqli_query($dbConnect, "SELECT `time` FROM `bonus_limit` WHERE `ip` = '$_SERVER[REMOTE_ADDR]'")
+		$data_time = mysqli_query($dbConnect, "SELECT `time` FROM `bonus_limit` WHERE `ip` = '$_SERVER[REMOTE_ADDR]'");
 		if (!mysqli_num_rows($data_time)) {
 			mysqli_query($dbConnect, "INSERT INTO `bonus_limit` VALUES ('$_SERVER[REMOTE_ADDR]', $bonus)");
 		} else {

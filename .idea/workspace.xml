@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bdf23ee-bae2-4039-95f3-13acb0920f59" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth/account.php" beforeDir="false" afterPath="$PROJECT_DIR$/auth/account.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/auth/profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/guest/signin.php" beforeDir="false" afterPath="$PROJECT_DIR$/guest/signin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/guest/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/guest/signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +17,10 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1i0nNzdsZ8tC54w1OmUlfiTdojA" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -32,7 +39,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1601024504908</updated>
-      <workItem from="1601024506474" duration="2939000" />
+      <workItem from="1601024506474" duration="3533000" />
+      <workItem from="1601053374839" duration="282000" />
+      <workItem from="1601053666585" duration="3073000" />
     </task>
     <servers />
   </component>

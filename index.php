@@ -12,7 +12,7 @@
 
     // This file contains important and classified data.
     require_once("config.php");
-
+    global $dbConnect;
     $userBalance = 0;
 
     // The usual distribution of site pages
@@ -72,7 +72,7 @@
     function getRecaptchaSuccess($captcha_var_name, $url_name, $location) {
         $captcha_var_name = $_POST['g-recaptcha-response'];
         if ($captcha_var_name) {
-            $url_name = 'https://www.google.com/recaptcha/api/siteverify?secret='.RECAPTCHA_SITE_SERCRET_KEY.
+            $url_name = 'https://www.google.com/recaptcha/api/siteverify?secret='.RECAPTCHA_SITE_SECRET_KEY.
                     '&response='.$captcha_var_name.
                     '&remoteip='.$_SERVER['REMOTE_ADDR'];
             $answer = file_get_contents($url_name);
