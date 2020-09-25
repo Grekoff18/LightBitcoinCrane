@@ -2,6 +2,7 @@
 	top("Signup");
 	require_once("index.php");
 	require_once("config.php");
+	global $dbConnect;
 
 	$login = $_POST['login'];
 	$email = $_POST['email'];
@@ -58,8 +59,8 @@
 	}
 
 	$password = md5($password);
-	$dbConnect->query("INSERT INTO `users` (`referal`, `login`, `email`, `password`, `payer_wallet`, `balance`) VALUES ('$referal', '$login', '$email', '$password', '$wallet', '$userBalance')");
-	$dbConnect->close();
+	mysqli_query($dbConnect, "INSERT INTO `users` (`referal`, `login`, `email`, `password`, `payer_wallet`, `balance`) VALUES ('$referal', '$login', '$email', '$password', '$wallet', '$userBalance')");
+	mysqli_close($dbConnect);
 	bottom();
 ?>
 

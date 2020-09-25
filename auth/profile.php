@@ -2,6 +2,7 @@
 	top('Profile');
 	require_once("config.php");
 	require_once("index.php");
+	global $dbConnect;
 	$limit = strtotime("+10 seconds");
 ?>
 
@@ -45,9 +46,9 @@
 
 			<?php 
 				$userID = getUserInfo("id");
-				$res = $dbConnect->query("SELECT `login`, `balance` FROM `users` WHERE `referal` = '$userID' ORDER BY `id` DESC LIMIT 10");
+                $res = mysqli_query($dbConnect, "SELECT `login`, `balance` FROM `users` WHERE `referal` = '$userID' ORDER BY `id` DESC LIMIT 10");
 				if (mysqli_num_rows($res)) {
-					while ($ref = $res->fetch_assoc()) {
+					while ($ref = mysqli_fetch_assoc($res)) {
 						$count++;
 						$refera_login_array = [];
 						$refera_balance_array = [];
