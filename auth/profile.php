@@ -4,22 +4,28 @@
 	require_once("index.php");
 	$limit = strtotime("+10 seconds");
 ?>
+
 <script src="https://www.google.com/recaptcha/api.js"></script>
 <p>Ваш баланс - <?=currencyFormatter(getUserInfo("balance"), "руб.");?></p>
+
 <form action="account" method="post">
 	<label>Получи бонус до 1 рубля</label>
 	<input type="hidden" name="bonus" value="<?=$limit?>">
 	<div class="g-recaptcha" data-sitekey="<?=RECAPTCHA_SITE_KEY?>"></div>
 	<button class="msg" type="submit">Получить</button>
 </form>
+
 <p>Vash bonus - <?=$_SESSION['bonus'];?></p>
 <p>Ваша реферальная ссылка - <?=MAIN_URL.getUserInfo("id");?></p>
 <h1><?=$_SESSION['delay']?></h1>
+
 <form action="home" method="post">
 	<input type="hidden" name="exit">
 	<button type="submit">Выйти из аккаунта</button>
 </form>
+
 <a href="news">Перейти на главную</a>
+
 <?php 
 	echo $_SESSION['recaptcha_answer']
 ?>
