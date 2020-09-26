@@ -28,7 +28,11 @@ input, button {
 }
 
 body {
-	background-color: #E4E9F4;
+	background-image: url("img/shining-casino-poker-banner_91128-226.jpg");
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	/*background-color: #E4E9F4;*/
 }
 
 .wrapper {
@@ -61,6 +65,7 @@ body {
 }
 
 .form_wrapper {
+	background-color: aqua !important;
 	height: 100%;
 	display: flex;
 	align-items: center;
@@ -93,10 +98,6 @@ body {
 	background: #e3e3e3;
 	border: unset;
 	cursor: pointer;
-}
-
-.auth_form a {
-	color: ;
 }
 
 .auth_form .g-recaptcha {

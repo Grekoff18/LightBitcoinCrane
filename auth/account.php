@@ -1,12 +1,13 @@
 <?php 
 	top("Account");
-	require_once("config.php");
-	require_once("index.php");
+	require_once "index.php";
+	require_once "config.php";
     global $dbConnect, $userBalance;
 	$bonus = $_POST['bonus'];
 	$_SESSION['identificator'] = getUserInfo("id");
 	
 	if (isset($bonus)) {
+		getRecaptchaSuccess("bonus_approved","profile");
 		$time = time();
 		$data_time = mysqli_query($dbConnect, "SELECT `time` FROM `bonus_limit` WHERE `ip` = '$_SERVER[REMOTE_ADDR]'");
 		if (!mysqli_num_rows($data_time)) {

@@ -69,23 +69,23 @@
     }
 
     // Captcha validate function
-    function getRecaptchaSuccess($captcha_var_name, $url_name, $location) {
-        $captcha_var_name = $_POST['g-recaptcha-response'];
-        if ($captcha_var_name) {
-            $url_name = 'https://www.google.com/recaptcha/api/siteverify?secret='.RECAPTCHA_SITE_SECRRET_KEY.
-                    '&response='.$captcha_var_name.
+    function getRecaptchaSuccess($session_name, $location) {
+        $captcha = $_POST['g-recaptcha-response'];
+        if ($captcha) {
+            $url = 'https://www.google.com/recaptcha/api/siteverify?secret='.RECAPTCHA_SITE_SECRRET_KEY.
+                    '&response='.$captcha.
                     '&remoteip='.$_SERVER['REMOTE_ADDR'];
-            $answer = file_get_contents($url_name);
+            $answer = file_get_contents($url);
             $decodeAnswer = json_decode($answer);
             if ($decodeAnswer->success == true) {
-                $_SESSION['recaptcha_answer'] = "Captcha proidena";
+                $_SESSION[$session_name] = "Captcha proidena";
             } else if ($decodeAnswer->success == false) {
-                $_SESSION['recaptcha_answer'] = "Captcha ne proidena";
+                $_SESSION[$session_name] = "Captcha ne proidena";
                 header("Location: $location");
                 exit();
             }
         } else {
-            $_SESSION['recaptcha_answer'] = "Vu actevirovali captchu?";
+            $_SESSION[$session_name] = "Vu actevirovali captchu?";
             header("Location: $location");
             exit();
         } 

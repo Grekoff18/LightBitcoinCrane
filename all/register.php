@@ -1,6 +1,6 @@
 <?php
-top("Регистрация");
-require_once("config.php");
+    top("Регистрация");
+    require_once("config.php");
 ?>
 <script src="https://www.google.com/recaptcha/api.js"></script>
 <div class="form_wrapper">

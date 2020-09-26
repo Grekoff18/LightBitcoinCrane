@@ -23,26 +23,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bdf23ee-bae2-4039-95f3-13acb0920f59" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/all/signin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/all/signup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/casino-poker-cards-and-roulette-wheel-banner_91128-250.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/shining-casino-poker-banner_91128-226.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/LightBitcoinCrane.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LightBitcoinCrane.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/all/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/all/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/all/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/all/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/all/signin.php" beforeDir="false" afterPath="$PROJECT_DIR$/all/signin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/all/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/all/signup.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth/account.php" beforeDir="false" afterPath="$PROJECT_DIR$/auth/account.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/news.php" beforeDir="false" afterPath="$PROJECT_DIR$/auth/news.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/auth/profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guest/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/guest/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guest/signin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/guest/signup.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/Sender.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Sender.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/bottom.php" beforeDir="false" afterPath="$PROJECT_DIR$/sections/bottom.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sections/top.php" beforeDir="false" afterPath="$PROJECT_DIR$/sections/top.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>

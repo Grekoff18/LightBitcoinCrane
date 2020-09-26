@@ -49,7 +49,7 @@
 	walletValidate($wallet);
 
 	// Captcha validate function
-	getRecaptchaSuccess($captcha, $url, "register");
+	getRecaptchaSuccess("recaptcha_answer", "register");
 
 
 	if ($_SESSION['referal']) {

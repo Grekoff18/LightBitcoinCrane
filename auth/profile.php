@@ -5,10 +5,8 @@
 	global $dbConnect, $count;
 	$limit = strtotime("+10 seconds");
 ?>
-
 <script src="https://www.google.com/recaptcha/api.js"></script>
 <p>Ваш баланс - <?=currencyFormatter(getUserInfo("balance"), "руб.");?></p>
-<?php print_r($_SESSION);?>
 <form action="account" method="post">
 	<label>Получи бонус до 1 рубля</label>
 	<input type="hidden" name="bonus" value="<?=$limit?>">
@@ -17,6 +15,7 @@
 </form>
 
 <p>Vash bonus - <?=$_SESSION['bonus'];?></p>
+<p><?=$_SESSION['bonus_approved'];?></p>
 <p>Ваша реферальная ссылка - <?=MAIN_URL.getUserInfo("id");?></p>
 <h1><?=$_SESSION['delay']?></h1>
 
