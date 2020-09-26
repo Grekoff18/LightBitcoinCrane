@@ -1,13 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2bdf23ee-bae2-4039-95f3-13acb0920f59" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/all/signin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/all/signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/LightBitcoinCrane.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LightBitcoinCrane.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/all/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/all/home.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth/account.php" beforeDir="false" afterPath="$PROJECT_DIR$/auth/account.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/news.php" beforeDir="false" afterPath="$PROJECT_DIR$/auth/news.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/auth/profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guest/signin.php" beforeDir="false" afterPath="$PROJECT_DIR$/guest/signin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guest/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/guest/signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/guest/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/guest/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/guest/signin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/guest/signup.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/Sender.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Sender.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sections/bottom.php" beforeDir="false" afterPath="$PROJECT_DIR$/sections/bottom.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sections/top.php" beforeDir="false" afterPath="$PROJECT_DIR$/sections/top.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,13 +58,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1i0nNzdsZ8tC54w1OmUlfiTdojA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -42,10 +84,26 @@
       <workItem from="1601024506474" duration="3533000" />
       <workItem from="1601053374839" duration="282000" />
       <workItem from="1601053666585" duration="3073000" />
+      <workItem from="1601118707420" duration="2958000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

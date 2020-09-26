@@ -8,7 +8,7 @@
 
 <script src="https://www.google.com/recaptcha/api.js"></script>
 <p>Ваш баланс - <?=currencyFormatter(getUserInfo("balance"), "руб.");?></p>
-
+<?php print_r($_SESSION);?>
 <form action="account" method="post">
 	<label>Получи бонус до 1 рубля</label>
 	<input type="hidden" name="bonus" value="<?=$limit?>">

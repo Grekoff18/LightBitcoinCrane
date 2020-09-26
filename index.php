@@ -11,7 +11,7 @@
     }
 
     // This file contains important and classified data.
-    require_once("config.php");
+    require_once "config.php";
     global $dbConnect;
     $userBalance = 0;
 
@@ -45,9 +45,9 @@
     };
 
     // function exit from profile
-    function exitFromProfile() {
+    function exitFromProfile($cookie_value) {
 	   if (isset($_POST['exit'])) {
-		  setcookie('usr', $confirm_user_information['login'], time() - 3600, "/");
+		  setcookie('usr', $cookie_value, time() - 3600, "/");
 		  $_SESSION['id'] = 0;
 	   }	
     }
@@ -72,7 +72,7 @@
     function getRecaptchaSuccess($captcha_var_name, $url_name, $location) {
         $captcha_var_name = $_POST['g-recaptcha-response'];
         if ($captcha_var_name) {
-            $url_name = 'https://www.google.com/recaptcha/api/siteverify?secret='.RECAPTCHA_SITE_SECRET_KEY.
+            $url_name = 'https://www.google.com/recaptcha/api/siteverify?secret='.RECAPTCHA_SITE_SECRRET_KEY.
                     '&response='.$captcha_var_name.
                     '&remoteip='.$_SERVER['REMOTE_ADDR'];
             $answer = file_get_contents($url_name);
