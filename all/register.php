@@ -4,20 +4,16 @@
 ?>
 <script src="https://www.google.com/recaptcha/api.js"></script>
 <div class="form_wrapper">
-	<form class="auth_form" action="signup" method="post">
-		<label>Логин</label>
-			<input type="text" name="login" placeholder="Введите свой логин">
-		<label>Почта</label>
-			<input type="email" name="email" placeholder="Введите адрес своей почты">
-		<label>Пароль</label>
-			<input type="password" name="password" placeholder="Введите ваш пароль">
-		<label>Подтверждение пароля</label>
-			<input type="password" name="password_confirm" placeholder="Подтвердите пароль">
-		<label>Кошелёк</label>
-			<input type="text" name="wallet" placeholder="Введите свой номер кошелька">
+	<form action="signup" method="post">
+		<input type="text" name="login" placeholder="Type your login here">
+		<input type="email" name="email" placeholder="Type your email here">
+		<input type="password" name="password" placeholder="Type your password here">
+		<input type="password" name="password_confirm" placeholder="Retype your password">
+		<input type="text" name="wallet" placeholder="Type your wallet">
 		<div class="g-recaptcha" data-sitekey="<?=RECAPTCHA_SITE_KEY?>"></div>
-		<button type="submit">Зарегистрироватся</button>
-		<p>У вас уже есть аккаунт? - <a href="home">Авторизируйтесь</a></p>
+		<button type="submit">Register</button>
+		<p>Already have an account?</p>
+		<button><a class="register_link" href="home">Sign in</a></button>
 
 		<?php  
 			if (count($_SESSION) > 0) {

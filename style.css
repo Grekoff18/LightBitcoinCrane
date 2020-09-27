@@ -1,12 +1,19 @@
 * {
 	margin: 0;
 	padding: 0;
+	color: #9CA9Cb;
 	font-size: 18px;
-	font-family: Montserrat, sans-serif;
+	font-family: "Acme", sans-serif;
 }
 
+@font-face {
+	font-family: "Acme";  
+	src: url("fonts/Acme-Regular.ttf") format("truetype"); 
+	font-style: normal; 
+	font-weight: regular; 
+} 
+
 h1 { 
-	color: #9CA9Cb;
 	font-weight: normal;
 	font-size: 25px;
 	border-bottom: 1px solid #7186C7;
@@ -20,6 +27,48 @@ p {
 a {
 	outline: none;
 	text-decoration: none;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 35px;
+	background-color: #2d384e;
+	border: 2px solid #9CA9Cb;
+	border-radius: 5px;
+}
+
+form>p {
+	color: #ebeff1;
+}
+
+input {
+	border: none;
+	border-bottom: 2px solid #9CA9Cb;
+	margin-bottom: 15px;
+	background-color: transparent;
+}
+
+button {
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+form>button {
+	width: 100%;
+	background-color: #9CA9Cb;
+	border: none;
+	color: #2d384e;
+}
+
+form>input {
+	width: 100%;
+}
+
+input::placeholder {
+	color: #ebeff1;
+	background-color: transparent;
 }
 
 input, button {
@@ -36,11 +85,10 @@ body {
 
 .wrapper {
 	max-width: 88%;
-	height: 100%;
+	height: 100vh;
 	display: flex;
 	margin: 0 auto;
-	background-color: #2d384e; 
-	opacity: 0.9;
+	background-color: rgba(45, 56, 78, 0.8);
 }
 
 .slide, .content {
@@ -48,11 +96,14 @@ body {
 }
 
 .slide {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
 	max-width: 21.42%;
 }
 
 .slide div {
-	background-color: #FFF;
 	margin: 20px;
 	height: 225px;
 	border-radius: 3px;
@@ -69,34 +120,6 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-}
-
-.auth_form {
-	display: flex;
-	flex-direction: column;
-	border: 1px solid #9CA9Cb;
-	padding: 20px;
-}
-
-.auth_form input {
-	border: none;
-	border-bottom: 1px solid #9CA9Cb;
-}
-
-.auth_form input::placeholder {
-	font-size: 14px;
-}
-
-.auth_form label {
-	margin-top: 8px;
-}
-
-.auth_form button {
-	margin-top: 8px;
-	padding: 10px 0;
-	background: #e3e3e3;
-	border: unset;
-	cursor: pointer;
 }
 
 .auth_form .g-recaptcha {
@@ -143,6 +166,15 @@ body {
 	background: #7186C7;
 	color: white;
 }
+
+.register_link {
+	color: #2d384e;
+}
+
+.g-recaptcha {
+	margin: 10px 0;
+}
+
 
 
 
