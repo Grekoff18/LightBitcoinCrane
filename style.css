@@ -28,11 +28,10 @@ input, button {
 }
 
 body {
-	background-image: url("img/shining-casino-poker-banner_91128-226.jpg");
-	background-size: contain;
-	background-position: center;
+	background-image: url(img/nissi-cover.jpg);
+	background-size: cover;
 	background-repeat: no-repeat;
-	/*background-color: #E4E9F4;*/
+	background-position: center;
 }
 
 .wrapper {
@@ -40,6 +39,8 @@ body {
 	height: 100%;
 	display: flex;
 	margin: 0 auto;
+	background-color: #2d384e; 
+	opacity: 0.9;
 }
 
 .slide, .content {
@@ -59,13 +60,11 @@ body {
 
 .content {
 	padding: 10px;
-	background: #FFF;
 	border-radius: 3px; 
 	margin: 20px 20px;
 }
 
 .form_wrapper {
-	background-color: aqua !important;
 	height: 100%;
 	display: flex;
 	align-items: center;
@@ -144,5 +143,9 @@ body {
 	background: #7186C7;
 	color: white;
 }
+
+
+
+
 
 

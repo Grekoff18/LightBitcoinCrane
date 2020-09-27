@@ -23,16 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bdf23ee-bae2-4039-95f3-13acb0920f59" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/casino-poker-cards-and-roulette-wheel-banner_91128-250.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/shining-casino-poker-banner_91128-226.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/all/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/all/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/all/signin.php" beforeDir="false" afterPath="$PROJECT_DIR$/all/signin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/all/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/all/signup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/account.php" beforeDir="false" afterPath="$PROJECT_DIR$/auth/account.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/auth/profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sections/top.php" beforeDir="false" afterPath="$PROJECT_DIR$/sections/top.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
@@ -75,6 +67,7 @@
       <workItem from="1601053374839" duration="282000" />
       <workItem from="1601053666585" duration="3073000" />
       <workItem from="1601118707420" duration="2958000" />
+      <workItem from="1601211831084" duration="1289000" />
     </task>
     <servers />
   </component>
